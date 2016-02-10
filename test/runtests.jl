@@ -23,7 +23,7 @@ traj_mem = @allocated TrajectoryMatrix(data, 3)
 tran_mem = @allocated traj'
 
 @test traj_mem < (data_mem * 2)
-@test tran_mem < (traj_mem * 2)
+@test tran_mem < (traj_mem * 3)
 
 data = [1 1 1 1; 2 2 2 2; 3 3 3 3]
 expected = [1 1 1 1 2 2 2 2; 2 2 2 2 3 3 3 3]

@@ -89,9 +89,9 @@ end
 
 function Base.transpose{T}(m::TrajectoryMatrix{T})
     if m.trans
-        return TrajectoryMatrix(m.data; window=m.window, trans=false)
+        return TrajectoryMatrix(m.data, m.window; trans=false)
     else
-        return TrajectoryMatrix(m.data; window=m.window, trans=true)
+        return TrajectoryMatrix(m.data, m.window; trans=true)
     end
 end
 
@@ -99,9 +99,9 @@ function Base.ctranspose{T}(m::TrajectoryMatrix{T})
     data = map(i -> conj(i), m.data)
 
     if m.trans
-        return TrajectoryMatrix(data; window=m.window, trans=false)
+        return TrajectoryMatrix(data, m.window; trans=false)
     else
-        return TrajectoryMatrix(data; window=m.window, trans=true)
+        return TrajectoryMatrix(data, m.window; trans=true)
     end
 end
 
