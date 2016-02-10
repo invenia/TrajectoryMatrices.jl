@@ -2,6 +2,6 @@ module TrajectoryMatrices
 
 include("matrix.jl")
 
-export TrajectoryMatrix
+export TrajectoryMatrix, traj
 
 end # end of module
